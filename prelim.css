@@ -1,11 +1,10 @@
 body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Trebuchet MS', sans-serif;
-            background: url('https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/pics/bg8.gif') no-repeat center center fixed;
-            background-size: cover;
-        }
-
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: url('https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/pics/bg8.gif') no-repeat center center fixed;
+    background-size: cover;
+}
 
 .container {
     max-width: 800px;
