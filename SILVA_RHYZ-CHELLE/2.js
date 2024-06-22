@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - 60,
+        top: targetSection.offsetTop - 60, 
         behavior: 'smooth'
       });
     }
