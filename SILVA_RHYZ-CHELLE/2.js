@@ -13,15 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
       ) {
         sections.forEach(s => s.classList.remove('active'));
         section.classList.add('active');
-        header.classList.add('fixed');
-        navbar.classList.add('fixed');
         foundActive = true;
       }
     });
 
     if (!foundActive) {
-      header.classList.remove('fixed');
-      navbar.classList.remove('fixed');
+      sections.forEach(s => s.classList.remove('active'));
     }
   }
 
@@ -29,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - 60, 
+        top: targetSection.offsetTop - navbar.offsetHeight, // Adjusted to accommodate fixed navbar
         behavior: 'smooth'
       });
     }
