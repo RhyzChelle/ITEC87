@@ -13,25 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
       ) {
         sections.forEach(s => s.classList.remove('active'));
         section.classList.add('active');
+        header.classList.add('fixed');
+        navbar.classList.add('fixed');
         foundActive = true;
       }
     });
 
     if (!foundActive) {
-      sections.forEach(s => s.classList.remove('active'));
+      header.classList.remove('fixed');
+      navbar.classList.remove('fixed');
     }
   }
 
   function scrollToSection(targetId) {
-  const targetSection = document.getElementById(targetId);
-  if (targetSection) {
-    window.scrollTo({
-      top: targetSection.offsetTop - navbar.offsetHeight,
-      behavior: 'smooth'
-    });
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 60, 
+        behavior: 'smooth'
+      });
+    }
   }
-}
-
 
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
