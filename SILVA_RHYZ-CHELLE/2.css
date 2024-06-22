@@ -7,9 +7,6 @@ body {
   background-position: center;
 }
 
-html {
-      scroll-behavior: smooth;
-    }
 
 header {
   background-image: url("bg22.gif");
@@ -78,8 +75,6 @@ nav a.active {
 section {
   text-align: center;
   background-color: #f9f9f9;
- padding-top: 60px;
-margin-top: -60px;		
   
 }
 .home-section p {
@@ -228,7 +223,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 200px;
+  margin-bottom: -150px;
 }
 
 .dishe-list {
