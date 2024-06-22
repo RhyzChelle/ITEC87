@@ -33,7 +33,7 @@ header {
 
 
 nav {
-  background-image: url('https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/SILVA_RHYZ-CHELLE/bg23.jpg');
+  background-image: url("bg23.jpg");
   text-align: center;
   position: fixed;
   width: 100%;
