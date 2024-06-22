@@ -2,14 +2,14 @@ body {
   margin: 0;
   font-family: Garamond, serif;
   padding-top: 60px;
-  background-image: url("E:/SILVA_RHYZ-CHELLE/fp.jpg");
+  background-image: url("fp.jpg");
   background-size: cover;
   background-position: center;
 }
 
 
 header {
-  background-image: url("E:/SILVA_RHYZ-CHELLE/bg22.gif");
+  background-image: url("bg22.gif");
   background-size: cover;
   background-position: center;
   padding: 40px 0;
@@ -33,7 +33,7 @@ header {
 
 
 nav {
-  background-image: url("E:/SILVA_RHYZ-CHELLE/bg23.jpg"); 
+  background-image: url("bg23.jpg"); 
   text-align: center;
   position: fixed;
   width: 100%;
