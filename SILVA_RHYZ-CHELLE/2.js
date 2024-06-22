@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
+
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navLinks.forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
+      if (link.getAttribute('href') === #${current}) {
         link.classList.add('active');
       }
     });
@@ -43,10 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (action === 'decrease' && value > 0) {
         input.value = value - 1;
       }
-
-      // Update the checkbox status based on quantity value
-      const correspondingCheckbox = this.closest('.dish').querySelector('.dish-checkbox');
-      correspondingCheckbox.checked = input.value > 0;
     });
   });
 
@@ -71,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const amountPaid = parseFloat(document.getElementById('amount-paid').value || 0);
     const change = amountPaid - total;
 
-    document.getElementById('total-amount').textContent = `Total Amount: ₱${total.toFixed(2)}`;
-    document.getElementById('change').textContent = `Change: ₱${change.toFixed(2)}`;
+    document.getElementById('total-amount').textContent = Total Amount: ₱${total.toFixed(2)};
+    document.getElementById('change').textContent = Change: ₱${change.toFixed(2)};
   });
 });
