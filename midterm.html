@@ -14,22 +14,25 @@
                 <img src="https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/pics/cor.png" alt="Midterm">
             </div>
             <div class="description">
-			
-                <p>This is the school's Certificate of Registration made using html and css.</p>
-				<br>
-                <button class="button" onclick="navigateTo('file:///E:/FINALS/SILVA_COR/COR.html')">
+                <p>This is the school's Certificate of Registration made using HTML and CSS.</p>
+                <br>
+                <button class="button" onclick="navigateTo('COR.html')">
                     <span>View</span>
                 </button>
-				<br><br>
-				<button class="button" onclick="navigateTo('E:/FINALS/midterm2.html')">
+                <br><br>
+                <button class="button" onclick="navigateTo('midterm2.html')">
                     <span>Next</span>
                 </button>
-                <button class="button" onclick="navigateTo('E:/FINALS/menu.html')">
+                <button class="button" onclick="navigateTo('menu.html')">
                     <span>Exit</span>
                 </button>
             </div>
         </div>
     </div>
-<script src="prelim.js"></script>
+<script>
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+</script>
 </body>
 </html>
