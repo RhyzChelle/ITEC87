@@ -1,100 +1,74 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const header = document.getElementById('header');
-  const navbar = document.getElementById('navbar');
-  const sections = document.querySelectorAll('section');
+document.addEventListener('DOMContentLoaded', function() {
+  // Add smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
 
-  function setActiveSection() {
-    let foundActive = false;
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Active link switching
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+
     sections.forEach(section => {
-      const bounding = section.getBoundingClientRect();
-      if (
-        bounding.top >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-      ) {
-        sections.forEach(s => s.classList.remove('active'));
-        section.classList.add('active');
-        header.classList.add('fixed');
-        navbar.classList.add('fixed');
-        foundActive = true;
+      const sectionTop = section.offsetTop - 60; // Adjust for fixed header
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
       }
     });
 
-    if (!foundActive) {
-      header.classList.remove('fixed');
-      navbar.classList.remove('fixed');
-    }
-  }
-
-  function scrollToSection(targetId) {
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      window.scrollTo({
-        top: targetSection.offsetTop - 60, 
-        behavior: 'smooth'
-      });
-    }
-  }
-
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      scrollToSection(targetId);
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
     });
   });
 
-  window.addEventListener('scroll', setActiveSection);
-  setActiveSection();
+  // Quantity buttons functionality
+  document.querySelectorAll('.quantity-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const action = this.dataset.action;
+      const input = this.parentNode.querySelector('.quantity');
+      let value = parseInt(input.value);
 
-  // Deselect all radio buttons on page load
-  document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.checked = false;
-  });
-});
-
-document.querySelector('.total').addEventListener('click', function() { 
-  let total = 0; 
-  let receipt = ''; 
-  const selectedDishes = document.querySelectorAll('.dish-checkbox:checked'); 
-  selectedDishes.forEach(dish => { 
-    const quantity = parseInt(dish.parentElement.querySelector('.quantity').value); 
-    const price = parseFloat(dish.getAttribute('data-price')); 
-    total += quantity * price; 
-    if (quantity > 0) { 
-      receipt += `${dish.parentElement.querySelector('h2').textContent} x${quantity} = ₱${(quantity * price).toFixed(2)}\n`; 
-    } 
-    dish.parentElement.querySelector('.quantity').value = '0'; 
-    dish.checked = false; 
+      if (action === 'increase') {
+        input.value = value + 1;
+      } else if (action === 'decrease' && value > 0) {
+        input.value = value - 1;
+      }
+    });
   });
 
-  const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value; 
-  if (paymentMethod === 'card') { 
-    total += 50.00; 
-  } 
+  // Calculate total
+  document.querySelector('.total').addEventListener('click', function() {
+    let total = 0;
+    let discount = 0;
 
-  const discountElement = document.querySelector('input[name="discount"]:checked');
-  const discountPercentage = discountElement ? parseFloat(discountElement.value) : 0; 
-  const discountedTotal = total * ((100 - discountPercentage) / 100); 
-  const amountPaid = parseFloat(document.getElementById('amount-paid').value); 
-  const change = amountPaid - discountedTotal; 
+    document.querySelectorAll('.dish-checkbox:checked').forEach(checkbox => {
+      const quantity = parseInt(checkbox.parentNode.querySelector('.quantity').value);
+      const price = parseFloat(checkbox.dataset.price);
+      total += quantity * price;
+    });
 
-  document.getElementById('total-amount').textContent = `Total Amount: ₱${discountedTotal.toFixed(2)}`; 
-  document.getElementById('change').textContent = `Change: ₱${change.toFixed(2)}`; 
+    document.querySelectorAll('input[name="discount"]').forEach(discountOption => {
+      if (discountOption.checked) {
+        discount = parseFloat(discountOption.value);
+      }
+    });
 
-  alert(`Receipt:\n${receipt}\nTotal: ₱${discountedTotal.toFixed(2)}\nChange: ₱${change.toFixed(2)}`); 
-}); 
+    total = total - (total * (discount / 100));
+    const amountPaid = parseFloat(document.getElementById('amount-paid').value || 0);
+    const change = amountPaid - total;
 
-document.querySelectorAll('.quantity-btn').forEach(button => { 
-  button.addEventListener('click', function() { 
-    const action = this.getAttribute('data-action'); 
-    const quantityInput = this.parentElement.querySelector('.quantity'); 
-    let quantity = parseInt(quantityInput.value); 
-    if (action === 'increase') { 
-      quantity++; 
-    } else if (action === 'decrease' && quantity > 0) { 
-      quantity--; 
-    } 
-    quantityInput.value = quantity; 
-  }); 
+    document.getElementById('total-amount').textContent = `Total Amount: ₱${total.toFixed(2)}`;
+    document.getElementById('change').textContent = `Change: ₱${change.toFixed(2)}`;
+  });
 });
