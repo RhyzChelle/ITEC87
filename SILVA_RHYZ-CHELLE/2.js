@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
@@ -44,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (action === 'decrease' && value > 0) {
         input.value = value - 1;
       }
+
+      // Update the checkbox status based on quantity value
+      const correspondingCheckbox = this.closest('.dish').querySelector('.dish-checkbox');
+      correspondingCheckbox.checked = input.value > 0;
     });
   });
 
