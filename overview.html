@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+</head>
+<body>
+    <h1>ITEC87 COMPILATION</h1>
+    <div class="wrapper">
+        <div class="container" id="c0">
+            <div class="image" id="i0">
+                <img src="E:/FINALS/pics/cor.png" alt="COR">
+                <div class="city"></div>
+            </div>
+            <div class="story" id="s0">
+                <div class="info">
+                    <h3>COR</h3>
+                    <p>This is the school's Certificate of Registration made using html and css.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="c1">
+            <div class="image" id="i1">
+                <img src="E:/FINALS/pics/resto.png" alt="Resto">
+                <div class="city"></div>
+            </div>
+            <div class="story" id="s1">
+                <div class="info">
+                    <h3>Restaurant Menu</h3>
+                    <p>This is my ideal restaurant menu with checkbox and amount calculations with discount.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="c2">
+            <div class="image" id="i2">
+                <img src="E:/FINALS/pics/resume.png" alt="Resume">
+                <div class="city"></div>
+            </div>
+            <div class="story" id="s2">
+                <div class="info">
+                    <h3>Resume</h3>
+                    <p>This is my resume created using bootstrap.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="c3">
+            <div class="image" id="i3">
+                <img src="E:/FINALS/pics/store.png" alt="Store">
+                <div class="city"></div>
+            </div>
+            <div class="story" id="s3">
+                <div class="info">
+                    <h3>Store</h3>
+                    <p>This is my mall or store page with checkbox, amount calculations with discount, and with increasing and decreasing of stocks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <h4>Hover the card</h4>
+            <button class="menu-button" onclick="navigateTo('E:/FINALS/menu.html')">Exit</button>
+        </div>
+    </div>
+	
+	
+	<style>
+	body {
+    background: url('E:/FINALS/pics/bg11.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 300px;
+    height: 500px;
+    perspective: 900px;
+}
+
+.container {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    transition: .5s all ease;
+    transform: rotateX(60deg) scale(0.7);
+    perspective: 900px;
+    box-shadow: 0px 20px 50px #555;
+    animation: entry 1s linear 1;
+    background-color: #ffdce0; 
+}
+
+.image {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    position: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#c0 {
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
+    z-index: 300;
+    box-shadow: 0px 20px 100px #555;
+}
+
+#c1 {
+    background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+    box-shadow: 0px 20px 100px #555;
+    left: 50%;
+    z-index: 0;
+}
+
+#c2 {
+    left: -150%;
+    z-index: 0;
+    background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+    box-shadow: 0px 20px 100px #555;
+}
+
+#c3 {
+    left: 150%; 
+    z-index: 0;
+    background: linear-gradient(to bottom, #3c647c 30%, #5c8fa0 100%);
+    box-shadow: 0px 20px 100px #555;
+}
+
+.container:hover {
+    cursor: pointer;
+    transform: rotate(0deg) scale(1); 
+    transition: .5s all ease;
+    z-index: 400;
+}
+
+.image {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to top, #eba65b 30%, #d99267 100%);
+}
+
+.story {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    height: 55%;
+    width: 100%;
+    background: linear-gradient(to bottom, #eba65b 0%, #d99267 40%);
+    z-index: 30;
+}
+
+.info {
+    position: absolute;
+    top: 10%;
+	justify-content: center;
+	font-family: Trebuchet MS;
+}
+
+h3 {
+    text-align: center;
+    text-shadow: 0px 0px 10px #eee;
+    color: #eee;
+    letter-spacing: 2px;
+}
+
+h4 {
+    color: white;
+    position: absolute;
+    top: 120%;
+    left: 30%;
+    letter-spacing: 2px;
+    font-family: Candara;
+}
+
+h1 {
+    color: white;
+    position: fixed;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    letter-spacing: 2px;
+    text-align: center; 
+    font-family: Candara;
+    font-size: 40px;
+}
+
+p {
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 20px 20px 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.page {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    left: 0%;
+    height: 20%;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes simple {
+    50% {
+        transform: translateX(10px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+}
+
+@keyframes entry {
+    0% {
+        top: -20%;
+        opacity: 0.1;
+    }
+    100% {
+        top: 0%;
+    }
+}
+.menu-button {
+  width: 165px;
+  height: 60px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+  font-family: Trebuchet MS, sans-serif;
+}
+
+.menu-button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu-button:active {
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  transition: 0.5s;
+}
+
+</style>
+
+	
+	<script>
+	function navigateTo(url) {
+            window.location.href = url;
+        }
+	</script>
+</body>
+</html>

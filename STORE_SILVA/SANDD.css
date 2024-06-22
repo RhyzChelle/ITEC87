@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Garamond, serif;
+  padding-top: 60px;
+  background-image: url("E:/STORE_SILVA/ibg2.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+header {
+  background-color: transparent;
+  padding: 40px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+}
+
+.logo p {
+  color: white;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 400px; 
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container h1 {
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
+button#update-store {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button#update-store:hover {
+  background: linear-gradient(45deg, #f06595, #ff6b6b);
+  transform: scale(1.05);
+}
+
+button#update-store:active {
+  transform: scale(1);
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+}
+
+button#exit-store {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button#exit-store:hover {
+  background: linear-gradient(45deg, #f06595, #ff6b6b);
+  transform: scale(1.05);
+}
+
+button#exit-store:active {
+  transform: scale(1);
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+}
+
+#update-store:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

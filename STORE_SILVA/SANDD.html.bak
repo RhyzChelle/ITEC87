@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPDATE STOCKS</title>
+  <link rel="stylesheet" href="SANDD.css">
+</head>
+<body>
+<header id="header">
+  <div class="logo">
+    <p><b>Ellysen's Emporium</b><br>
+    <i>Chic and fun, for everyone, Ellysen Emporium, where trends are spun!</i> </p>
+  </div>
+</header>
+<div class="container">
+  <h1>UPDATE STOCKS </h1>
+  <br>
+  <form id="stock-form">
+    <label for="item">Select Item:</label>
+    <select id="item">
+      <option value="slim-fit-jeans-women">Slim Fit Jeans (Women)</option>
+      <option value="flared-jeans-women">Flared Jeans (Women)</option>
+      <option value="bootcut-jeans-men">Bootcut Jeans (Men)</option>
+      <option value="straight-jeans-men">Straight Jeans (Men)</option>
+      <option value="v-neck-men">V-neck (Men)</option>
+      <option value="crew-neck-men">Crew neck (Men)</option>
+      <option value="long-sleeve-women">Long sleeve (Women)</option>
+      <option value="short-sleeve-women">Short sleeve (Women)</option>
+      <option value="white-sando-men">White (Men)</option>
+      <option value="black-sando-men">Black (Men)</option>
+      <option value="white-sando-women">White (Women)</option>
+      <option value="black-sando-women">Black (Women)</option>
+      <option value="floral-100-women">Floral fragrance with a hint of citrus (Women)</option>
+      <option value="floral-150-women">Floral fragrance with a hint of citrus (Women)</option>
+      <option value="woody-100-men">Woody scent with notes of spice (Men)</option>
+      <option value="woody-150-men">Woody scent with notes of spice (Men)</option>
+      <option value="barbie-doll">Barbie Doll</option>
+      <option value="ken-doll">Ken Doll</option>
+      <option value="sports-car">Sports Car</option>
+      <option value="off-road-truck">Off-road Truck</option>
+    </select>
+    <br><br>
+    <label for="stock">Stock to Add or Subtract:</label>
+    <input type="number" id="stock" min="1" required>
+    <br><br>
+    <label for="operation">Select Operation:</label>
+    <select id="operation">
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+    </select>
+    <br><br>
+    <button type="button" id="update-store" disabled>Update Stock and Go to Store</button>
+    <button type="button" id="exit-store">Exit without Update</button>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const items = [
+      'slim-fit-jeans-women',
+      'flared-jeans-women',
+      'bootcut-jeans-men',
+      'straight-jeans-men',
+      'v-neck-men',
+      'crew-neck-men',
+      'long-sleeve-women',
+      'short-sleeve-women',
+      'white-sando-men',
+      'black-sando-men',
+      'white-sando-women',
+      'black-sando-women',
+      'floral-100-women',
+      'floral-150-women',
+      'woody-100-men',
+      'woody-150-men',
+      'barbie-doll',
+      'ken-doll',
+      'sports-car',
+      'off-road-truck'
+    ];
+
+    const updateButton = document.getElementById('update-store');
+    const stockInput = document.getElementById('stock');
+
+    // Initialize stock values to 100 if not already set
+    items.forEach(item => {
+      if (!localStorage.getItem(item)) {
+        localStorage.setItem(item, 100);
+      }
+    });
+
+    // Enable/disable the update button based on stock input
+    stockInput.addEventListener('input', function() {
+      if (stockInput.value.trim() === '' || parseInt(stockInput.value, 10) <= 0) {
+        updateButton.disabled = true;
+      } else {
+        updateButton.disabled = false;
+      }
+    });
+
+    document.getElementById('update-store').addEventListener('click', function() {
+      const item = document.getElementById('item').value;
+      const stockChange = parseInt(stockInput.value, 10);
+      const operation = document.getElementById('operation').value;
+
+      // Retrieve the current stock from local storage
+      let currentStock = parseInt(localStorage.getItem(item), 10);
+
+      // Update the stock based on the selected operation
+      let updatedStock;
+      if (operation === 'add') {
+        updatedStock = currentStock + stockChange;
+      } else if (operation === 'subtract') {
+        updatedStock = currentStock - stockChange;
+        if (updatedStock < 0) {
+          updatedStock = 0; // Ensure stock doesn't go negative
+        }
+      }
+
+      // Save the updated stock back to local storage
+      localStorage.setItem(item, updatedStock);
+
+      alert('Stock updated successfully!');
+
+      // Redirect to store3.html
+      window.location.href = 'STORE3_SILVA.html';
+    });
+
+    // Exit button functionality
+    document.getElementById('exit-store').addEventListener('click', function() {
+      // Redirect to store3.html
+      window.location.href = 'STORE3_SILVA.html';
+    });
+  });
+</script>
+</body>
+</html>

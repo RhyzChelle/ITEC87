@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDTERM</title>
+    <link rel="stylesheet" href="prelim.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">MIDTERM</h1>
+        <div class="content">
+            <div class="image">
+                <img src="E:/FINALS/pics/resto.png" alt="Resto">
+            </div>
+            <div class="description">
+			
+                <p>This is my ideal restaurant menu with checkbox and amount calculations with discount.</</p>
+				<br><br>
+                <button class="button" onclick="navigateTo('file:///E:/FINALS/SILVA_RHYZ-CHELLE/SILVA_RHYZ-CHELLE.html')">
+                    <span>View</span>
+                </button>
+				<br><br>
+                <button class="button" onclick="navigateTo('E:/FINALS/menu.html')">
+                    <span>Exit</span>
+                </button>
+            </div>
+        </div>
+    </div>
+<script src="prelim.js"></script>
+</body>
+</html>

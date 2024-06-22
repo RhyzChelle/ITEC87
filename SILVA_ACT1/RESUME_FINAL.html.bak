@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Garamond, serif;
+            background-color: black;
+            color: white; /* Font color for the body */
+        }
+        .jumbotron {
+            background: none;
+            color: white; /* Font color for the jumbotron title */
+            margin-bottom: 0; /* Remove default bottom margin */
+        }
+        .profile-img {
+            border-radius: 50%; 
+            height: 170px; 
+            width: 170px; 
+            border: 5px solid white;
+        }
+        h2 {
+            font-family: Garamond, serif;
+            padding: 5px 10px;
+            display: inline-block;
+            border: 3px solid white;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: black; /* Font color for the section titles */
+        }
+        .gradient-section {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Light grey background with transparency for sections */
+        }
+        .gradient-section table {
+            background: transparent;
+            border: 1px solid white;
+        }
+        .table th,
+        .table td {
+            border: 2px solid white !important;
+            color: white; /* Font color for the table contents */
+        }
+    </style>
+</head>
+<body>
+    <!-- Jumbotron Header -->
+    <div class="jumbotron text-center">
+        <img src="resumepic.jpg" alt="Profile" class="profile-img img-fluid">
+        <h1 class="display-4">Rhyz-chelle P. Silva</h1>
+        <hr class="my-4">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="gradient-section">
+                    <h2><b>Objectives<b></h2>
+                    <p class="lead">Aspiring IT professional eager to kickstart my career in the technology industry. Seeking an entry-level role where I can apply my foundational knowledge of IT principles and programming languages to contribute to projects, learn from experienced professionals, and grow within a supportive team environment. My goal is to contribute effectively to a dynamic IT team and support the organization's objectives for technological excellence and innovation.</p>
+                </div>
+
+                <div class="gradient-section">
+                    <h2>Personal Information</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Contact No.</td>
+                                <td><b>09568109110</b></td>
+                            </tr>
+                            <tr>
+                                <td>E-mail Address</td>
+                                <td><b><i>rhyzchelle.silva@citycollegeoftagaytay.edu.ph</i></b></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td><b>Brgy. Mataas na Burol Silang, Cavite</b></td>
+                            </tr>
+                            <tr>
+                                <td>Birthdate</td>
+                                <td><b>April 28, 2003</b></td>
+                            </tr>
+                            <tr>
+                                <td>Birthplace</td>
+                                <td><b>Lalaan Silang, Cavite</b></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td><b>Female</b></td>
+                            </tr>
+                            <tr>
+                                <td>Religion</td>
+                                <td><b>Catholic</b></td>
+                            </tr>
+                            <tr>
+                                <td>Father's Name</td>
+                                <td><b>Rowelle M. Silva</b></td>
+                            </tr>
+                            <tr>
+                                <td>Mother's Name</td>
+                                <td><b>Celeste B. Poblete</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="gradient-section">
+                    <h2>Educational Background</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>2021-Present</b></td>
+                                <td>Bachelor of Science in Information Technology<br>City College of Tagaytay, Tagaytay City</td>
+                            </tr>
+                            <tr>
+                                <td><b>2019-2021</b></td>
+                                <td>Graduate - Senior High School<br>Infant Jesus Academy of Silang Inc., Silang, Cavite</td>
+                            </tr>
+                            <tr>
+                                <td><b>2015-2019</b></td>
+                                <td>Graduate - Junior High School<br>Infant Jesus Academy of Silang Inc., Silang, Cavite</td>
+                            </tr>
+                            <tr>
+                                <td><b>2009-2015</b></td>
+                                <td>Graduate - Elementary<br>Iba Elementary School</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="gradient-section">
+                    <h2>Skills</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr><td>Knowledge of database systems like MySQL</td></tr>
+                            <tr><td>Understanding of network protocols, configurations, and troubleshooting techniques</td></tr>
+                            <tr><td>Familiarity with security concepts, tools, and practices to protect systems and data</td></tr>
+                            <tr><td>Ability to provide technical support and assistance to users</td></tr>
+                            <tr><td>Skills in data manipulation, analysis, and visualization using tools like Excel and SQL</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="gradient-section">
+                    <h2>Work Experience</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>ABC Tech Solutions Inc.</b></td>
+                                <td>Junior IT Support Specialist</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="gradient-section">
+                    <h2>Membership/Seminar</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>2017-2018</b></td>
+                                <td>Kalasag<br>Member<br>Infant Jesus Academy of Silang Inc., Silang, Cavite</td>
+                            </tr>
+                            <tr>
+                                <td><b>2021</b></td>
+                                <td>Mental Well-Being: A Healthy Mind is the Greatest Treasure to Find (2021)</td>
+                            </tr>
+                            <tr>
+                                <td><b>2021</b></td>
+                                <td>Cybersecurity</td>
+                            </tr>
+                            <td><b>2024</b></td>
+                                <td>SCS TechFair</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="gradient-section">
+                    <h2>Character Reference</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Kurt Ellysen R. Manguerra</b></td>
+                                <td>09559577708</td>
+                            </tr>
+                            <tr>
+                                <td><b>Fatima Claire P. Paterno</b></td>
+                                <td>09453426301</td>
+                            </tr>
+                            <tr>
+                                <td><b>Erica O. Enriquez</b></td>
+                                <td>09164911098</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

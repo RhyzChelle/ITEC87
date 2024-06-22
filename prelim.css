@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: url('E:/FINALS/pics/bg8.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+
+.page-title {
+    font-size: 60px;
+    font-family: Candara, sans-serif;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image {
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    text-align: center;
+}
+
+.description p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Default button style */
+.button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.button span {
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+    position: relative;
+    z-index: 1;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.button::before {
+    left: -10px;
+    background: #1e96fc;
+}
+
+.button::after {
+    right: -10px;
+    background: #072ac8;
+}
+
+.button:hover::before,
+.button:hover::after {
+    width: 58%;
+}
+
+.button:hover span {
+    color: black;
+    transition: 0.3s;
+}

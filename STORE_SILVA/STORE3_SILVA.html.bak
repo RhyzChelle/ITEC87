@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILVA_STORE</title>
+  <link rel="stylesheet" href="STORE3.css">
+</head>
+<body>
+
+  <header id="header">
+   <div class="logo">
+   <p><b>Ellysen's Emporium</b><br>
+   <i>Chic and fun, for everyone, Ellysen Emporium, where trends are spun!</i> </p>
+   
+   
+   </div>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#main">Jeans</a></li>
+      <li><a href="#t-shirt">T-shirt</a></li>
+      <li><a href="#sando">Sando</a></li>
+	  <li><a href="#perfume">Perfume</a></li>
+	   <li><a href="#toys">Toys</a></li>
+	   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+	   &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+	   <button class="button" id="store" onclick="window.location.href = 'SANDD.html';">Update Stocks</button>
+
+    </ul>
+  </nav>
+ 
+ <!-- HOME -->
+ 
+  <section id="home">
+  <section class ="home-section">
+    <div class ="home-content"><b>Welcome to Our Store </b>
+	<br>
+	<div class="profile">
+	<img src="logo.png" alt="Square Picture" class="center-right">
+	</div>
+    <p>Welcome to Ellysen Emporium, your one-stop destination for fashion and fun! 
+	Nestled in the heart of the city, Ellysen Emporium offers a delightful shopping experience where style meets playfulness.
+	We are more than just a store—we are a destination for style seekers and joy enthusiasts alike. 
+	Come, explore, and experience the magic of Ellysen Emporium today!</p>
+	</section>
+
+  <!-- JEANS -->
+  <section id="main">
+    <div class="jeans-content"><b>Classic Blue Denim Jeans</b></div>
+    <div class="jeans-section">
+      <div class="jeans">
+        <input type="checkbox" class="jeans-checkbox" data-price="1499.00">
+        <img src="sf.png" alt="sf">
+        <h2>Slim Fit (Women) <br> ₱1499.00 </h2>
+        <p>Tailored through the hips and thighs with a narrower leg opening, providing a streamlined silhouette without being too tight.</p>
+        <br>
+        <div class="quantity-container">
+          <button class="quantity-btn" data-action="decrease">-</button>
+          <input type="number" class="quantity" value="0" min="0" max="100">
+          <button class="quantity-btn" data-action="increase">+</button>
+        </div>
+        <br><br>
+        <div class="stock" data-item="slim-fit-jeans-women">Stock: 100</div>
+      </div>
+	  
+	  <div class="jeans">
+        <input type="checkbox" class="jeans-checkbox" data-price="1499.00">
+        <img src="fj.png" alt="fj">
+        <h2>Flared (Women) <br> ₱1499.00 </h2>
+        <p>Flare jeans, designed to fit snugly around the waist and hips before gracefully widening as they flow down to the knees, are a fashion dream come true.</p>
+        <br>
+        <div class="quantity-container">
+          <button class="quantity-btn" data-action="decrease">-</button>
+          <input type="number" class="quantity" value="0" min="0" max="100">
+          <button class="quantity-btn" data-action="increase">+</button>
+        </div>
+        <br><br>
+        <div class="stock" data-item="flared-jeans-women">Stock: 100</div>
+      </div>
+	  
+      <div class="jeans">
+        <input type="checkbox" class="jeans-checkbox" data-price="1499.00">
+        <img src="bc.png" alt="bc">
+        <h2>Bootcut (Men) <br> ₱1499.00 </h2>
+        <p>Fitted through the hips and thighs then slightly flares out from the knee to the hem, giving a balanced look that pairs well with boots or heels.</p>
+        <br>
+        <div class="quantity-container">
+          <button class="quantity-btn" data-action="decrease">-</button>
+          <input type="number" class="quantity" value="0" min="0" max="100">
+          <button class="quantity-btn" data-action="increase">+</button>
+        </div>
+        <br><br>
+        <div class="stock" data-item="bootcut-jeans-men">Stock: 100</div>
+      </div>
+
+      <div class="jeans">
+        <input type="checkbox" class="jeans-checkbox" data-price="1499.00">
+        <img src="s.png" alt="s">
+        <h2>Straight (Men)<br> ₱1499.00 </h2>
+        <p>Straight from the hips to the ankles, offering a timeless and versatile style suitable for any occasion.</p>
+        <br>
+        <div class="quantity-container">
+          <button class="quantity-btn" data-action="decrease">-</button>
+          <input type="number" class="quantity" value="0" min="0" max="100">
+          <button class="quantity-btn" data-action="increase">+</button>
+        </div>
+        <br><br>
+        <div class="stock" data-item="straight-jeans-men">Stock: 100</div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- T-SHIRT -->
+  
+<section id="t-shirt">
+  <div class ="tshirt-content"><b>Basic Cotton T-shirt</b></div>
+  <div class="tshirt-section">
+  <main>
+  <div class="tshirt">
+    <input type="checkbox" class="tshirt-checkbox" data-price="699.00">
+          <img src="v.png" alt="v">
+          <div class="tshirt-info">
+            <h2>V-neck (Men) <br> ₱699.00 </h2>
+            <p>Featuring a V-shaped neckline that elongates the neck and adds a touch of elegance to any outfit.</p>
+			<br>
+            <div class="quantity-container">
+              <button class="quantity-btn" data-action="decrease">-</button>
+              <input type="number" class="quantity" value="0" min="0" max="100">
+              <button class="quantity-btn" data-action="increase">+</button>
+            </div>
+			  <br><br>
+            <div class="stock" data-item="v-neck-men">Stock: 100</div>
+    </div>
+  </div>
+
+  <div class="tshirt">
+    <input type="checkbox" class="tshirt-checkbox" data-price="699.00">
+          <img src="cn.png" alt="cn">
+          <div class="tshirt-info">
+            <h2>Crew neck (Men) <br> ₱699.00 </h2>
+            <p>Classic round neckline that sits comfortably around the neck, providing a timeless and casual look.</p>
+			<br>
+            <div class="quantity-container">
+              <button class="quantity-btn" data-action="decrease">-</button>
+              <input type="number" class="quantity" value="0" min="0" max="100">
+              <button class="quantity-btn" data-action="increase">+</button>
+            </div>
+			  <br><br>
+            <div class="stock" data-item="crew-neck-men">Stock: 100</div>
+  </div>
+    </div>
+  
+  <div class="tshirt">
+    <input type="checkbox" class="tshirt-checkbox" data-price="699.00">
+          <img src="ls.png" alt="ls">
+          <div class="tshirt-info">
+            <h2>Long sleeve (Women)<br> ₱699.00 </h2>
+            <p>Perfect for cooler weather, offering additional coverage and warmth while maintaining a stylish appearance.</p>
+			<br>
+            <div class="quantity-container">
+              <button class="quantity-btn" data-action="decrease">-</button>
+              <input type="number" class="quantity" value="0" min="0" max="100">
+              <button class="quantity-btn" data-action="increase">+</button>
+            </div>
+			  <br><br>
+            <div class="stock" data-item="long-sleeve-women">Stock: 100</div>
+  </div>
+    </div>
+
+  <div class="tshirt">
+    <input type="checkbox" class="tshirt-checkbox" data-price="699.00">
+          <img src="ss.png" alt="ss">
+          <div class="tshirt-info">
+            <h2>Short sleeve (Women) <br> ₱699.00 </h2>
+            <p>Ideal for warm days or layering under jackets and sweaters, providing breathable comfort and freedom of movement.</p>
+			<br>
+            <div class="quantity-container">
+              <button class="quantity-btn" data-action="decrease">-</button>
+              <input type="number" class="quantity" value="0" min="0" max="100">
+              <button class="quantity-btn" data-action="increase">+</button>
+            </div>
+			  <br><br>
+            <div class="stock" data-item="short-sleeve-women">Stock: 100</div>
+  </div>
+    </div>
+</main>
+</div>
+</section>
+ 
+ <!-- SANDO -->
+ 
+  <section id="sando">
+  <div class ="sando-content"><b>Ribbed Cotton Tank Tops for Men and Women</b></div>
+  <div class="sando-section">
+
+  <ul class="sando-list">
+    <li class="sando">
+      <input type="checkbox" class="sando-checkbox" data-price="499.00">
+      <img src="wt.png" alt="Dish 1">
+      <div class="sando-info">
+        <h2>White (Men) <br> ₱499.00 </h2>
+        <p>Classic and versatile </p>
+		<br>
+		<div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+  <input type="number" class="quantity" value="0" min="0" max="100">
+    <button class="quantity-btn" data-action="increase">+</button>
+  </div>
+			  <br><br>
+            <div class="stock" data-item="white-sando-men">Stock: 100</div>
+      </div>
+    </li>
+	
+	<li class="sando">
+      <input type="checkbox" class="sando-checkbox" data-price="499.00">
+      <img src="blk.png" alt="Dish 1">
+      <div class="sando-info">
+        <h2>Black (Men)<br> ₱499.00 </h2>
+        <p>Sleek and stylish</p>
+		<br>
+		<div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="100">
+    <button class="quantity-btn" data-action="increase">+</button>
+  </div>
+			  <br><br>
+            <div class="stock" data-item="black-sando-men">Stock: 100</div>
+      </div>
+    </li>
+
+    <li class="sando">
+      <input type="checkbox" class="sando-checkbox" data-price="499.00">
+      <img src="w.png" alt="Dish 1">
+      <div class="sando-info">
+        <h2>White (Women)<br> ₱499.00 </h2>
+        <p>Timeless and chic</p>
+		<br>
+		<div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="100">
+    <button class="quantity-btn" data-action="increase">+</button>
+  </div>
+			  <br><br>
+            <div class="stock" data-item="white-sando-women">Stock: 100</div>
+      </div>
+    </li>
+	
+
+    <li class="sando">
+      <input type="checkbox" class="sando-checkbox" data-price="499.00">
+      <img src="bl.png" alt="Dish 1">
+      <div class="sando-info">
+        <h2>Black (Women)<br> ₱499.00</h2>
+        <p>Effortlessly elegant</p>
+		<br>
+		<div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="100">
+    <button class="quantity-btn" data-action="increase">+</button>
+  </div>
+			  <br><br>
+            <div class="stock" data-item="black-sando-women">Stock: 100</div>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
+
+<!-- PERFUME -->
+	
+	<section id="perfume">
+  <div class ="perfume-content"><b>Perfume for Men and Women</b></div>
+  <div class="perfume-section">
+  <main>
+  <div class="perfume-container">
+  <div class="perfume">
+    <input type="checkbox" class="perfume-checkbox" data-price="799.00">
+    <img src="perf.jpeg" alt="et">
+    <div class="perfume-info">
+      <h2>Floral fragrance with a hint of citrus <br> (Women) <br> 100 ml<br> ₱799.00 </h2>
+     <p>A generous-sized bottle that ensures you always have your favorite scent on hand, perfect for daily wear or special occasions.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="70">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="floral-100-women">Stock: 100</div>
+  </div>
+    </div>
+  </div>
+
+  <div class="perfume">
+    <input type="checkbox" class="perfume-checkbox" data-price="799.00">
+    <img src="perf.jpeg" alt="et">
+    <div class="perfume-info">
+      <h2>Floral fragrance with a hint of citrus <br> (Women) <br> 150 ml<br> ₱999.00 </h2>
+     <p>A luxurious option for those who can't get enough of their signature fragrance, providing long-lasting freshness and allure.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="70">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="floral-150-women">Stock: 100</div>
+  </div>
+    </div>
+  </div>
+
+  <div class="perfume">
+    <input type="checkbox" class="perfume-checkbox" data-price="799.00">
+    <img src="mp.png" alt="Dish 2">
+    <div class="perfume-info">
+      <h2>Woody scent with notes of spice (Men)<br> 100 ml <br> ₱799.00 </h2>
+      <p>Conveniently sized for on-the-go use, offering a delightful burst of fragrance that lasts throughout the day.</p>
+	  <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+   <input type="number" class="quantity" value="0" min="0" max="70">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="woody-100-men">Stock: 100</div>
+  </div>
+    </div>
+  </div>
+  
+  <div class="perfume">
+    <input type="checkbox" class="perfume-checkbox" data-price="999.00">
+    <img src="mp.png" alt="Dish 2">
+    <div class="perfume-info">
+      <h2>Woody scent with notes of spice (Men)<br> 150 ml <br> ₱999.00 </h2>
+      <p>A generous-sized bottle that ensures you always have your favorite scent on hand, perfect for daily wear or special occasions.</p>
+	  <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="70">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="woody-150-men">Stock: 100</div>
+  </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+</div>
+</section>
+  
+  <!-- TOYS -->
+  <section id="toys">
+  <div class ="toys-content"><b>Cars and Dolls</b></div>
+  <div class="toys-section">
+  <main>
+  <div class="toys-container">
+    <div class="toys">
+      <img src="bb.jpg" alt="bb">
+      <input type="checkbox" class="perfume-checkbox" data-price="599.00">
+    <div class="toys-info">
+      <h2>Barbie Doll<br> ₱599.00 </h2>
+     <p>Fashion-forward and fabulous, the ultimate style icon.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="50">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="barbie-doll">Stock: 100</div>
+    </div>
+	</div>
+	</div>
+	
+    
+    <div class="toys">
+      <img src="k.jpg" alt="k">
+      <input type="checkbox" class="perfume-checkbox" data-price="599.00">
+    <div class="toys-info">
+      <h2>Ken Doll <br> ₱599.00 </h2>
+     <p> Adventurous and handsome, Barbie's perfect companion.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="50">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="ken-doll">Stock: 100</div>
+    </div>
+	</div>
+	</div>
+	
+    
+    <div class="toys">
+      <img src="sc.jpg" alt="sc">
+      <input type="checkbox" class="perfume-checkbox" data-price="399.00">
+    <div class="toys-info">
+      <h2>Sports Car <br> ₱399.00 </h2>
+     <p>Sleek and speedy, perfect for racing adventures.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="50">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="sports-car">Stock: 100</div>
+    </div>
+	</div>
+	</div>
+	
+    
+    <div class="toys">
+      <img src="or.jpg" alt="or">
+      <input type="checkbox" class="perfume-checkbox" data-price="399.00">
+    <div class="toys-info">
+      <h2>Off-road Truck<br> ₱399.00 </h2>
+     <p>Sturdy and rugged, ideal for outdoor exploration.</p>
+	 <br>
+	  <div class="quantity-container">
+    <button class="quantity-btn" data-action="decrease">-</button>
+    <input type="number" class="quantity" value="0" min="0" max="50">
+    <button class="quantity-btn" data-action="increase">+</button>
+	<br><br>
+            <div class="stock" data-item="off-road-truck">Stock: 100</div>
+    </div>
+	</div>
+	</div>
+	</div>
+  </section>
+
+
+<section id="total"> <h2>Payment Method:</h2> 
+<label> <input type="radio" name="payment-method" value="cash"> Cash </label> 
+<label> <input type="radio" name="payment-method" value="card"> Card </label>
+<label> <input type="radio" name="payment-method" value="g-cash"> G-cash </label> <br><br> 
+<label> <input type="radio" name="discount" value="20"> Senior </label>
+<label> <input type="radio" name="discount" value="30"> PWD </label>
+<label> <input type="radio" name="discount" value="10"> Student </label>
+
+<br><br>
+ 
+ <div>
+  <label for="amount-paid">Amount Paid:</label>
+  <input type="number" id="amount-paid" name="amount-paid" required>
+</div>
+
+<br><br>
+ <button class="total" role="button">Calculate Total</button> 
+ <br>
+ <h2 id="total-amount">Total Amount: ₱0.00</h2> 
+ <h2 id="change">Change: ₱0.00</h2> </section>
+
+<footer id="footer">
+  <div class="footer-content">
+    <img src="riz.jpg" alt="Footer Logo" class="footer-logo">
+    <p>&copy; 2024 Ellysen Emporium. All rights reserved.</p>
+  </div>
+</footer>
+  
+ 
+<audio controls autoplay loop>
+    <source src="bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script src="STORE3.js"></script>
+</body>
+</html>
