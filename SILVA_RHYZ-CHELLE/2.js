@@ -23,14 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function scrollToSection(targetId) {
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      window.scrollTo({
-        top: targetSection.offsetTop - navbar.offsetHeight, // Adjusted to accommodate fixed navbar
-        behavior: 'smooth'
-      });
-    }
+  const targetSection = document.getElementById(targetId);
+  if (targetSection) {
+    window.scrollTo({
+      top: targetSection.offsetTop - navbar.offsetHeight,
+      behavior: 'smooth'
+    });
   }
+}
+
 
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
