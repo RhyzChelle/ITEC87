@@ -4,90 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITEC87 COMPILATION</title>
+  <style>
+    body {
+      font-family: Brandon Grotesque, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: url('https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/pics/bg8.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .main-menu {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+    }
+
+    .menu-title {
+      font-size: 60px;
+      color: #fff;
+      font-family: Candara;
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+
+    .menu-button {
+      width: 165px;
+      height: 60px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 17px;
+      border-radius: 1rem;
+      border: none;
+      position: relative;
+      background: #100720;
+      transition: 0.1s;
+      font-family: Trebuchet MS, sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .menu-button::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2%);
+      filter: blur(15px);
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .menu-button:active {
+      transform: scale(0.9) rotate(3deg);
+      background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2%);
+      transition: 0.5s;
+    }
+  </style>
 </head>
 <body>
   <div class="main-menu">
     <h1 class="menu-title">MAIN MENU</h1>
-	<br><br>
     <button class="menu-button" onclick="navigateTo('prelim.html')">Prelim</button>
-	<br>
     <button class="menu-button" onclick="navigateTo('midterm.html')">Midterm</button>
-	<br>
-    <button class="menu-button"onclick="navigateTo('finals.html')">Finals</button>
-	<br>
+    <button class="menu-button" onclick="navigateTo('finals.html')">Finals</button>
     <button class="menu-button" onclick="navigateTo('overview.html')">Overview</button>
-	<br>
     <button class="menu-button" onclick="navigateTo('https://RhyzChelle.github.io/ITEC87/menu.html')">Exit</button>
-	 </div>
+  </div>
 
-<style>
-body {
-  font-family: Brandon Grotesque, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: url('https://raw.githubusercontent.com/RhyzChelle/ITEC87/main/pics/bg8.gif') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.main-menu {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 400px;
-}
-
-.menu-title {
-  font-size: 60px;
-  color: #fff;
-  font-family: Candara;
-  margin-bottom: 40px;
-  margin-top: 10px;
-}
-
-.menu-button {
-  width: 165px;
-  height: 60px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 17px;
-  border-radius: 1rem;
-  border: none;
-  position: relative;
-  background: #100720;
-  transition: 0.1s;
-  font-family: Trebuchet MS, sans-serif;
-}
-
-.menu-button::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-  filter: blur(15px);
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.menu-button:active {
-  transform: scale(0.9) rotate(3deg);
-  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-  transition: 0.5s;
-}
-</style>
-
-<script>
-function navigateTo(url) {
+  <script>
+    function navigateTo(url) {
       window.location.href = url;
     }
-	</script>
+  </script>
 </body>
 </html>
