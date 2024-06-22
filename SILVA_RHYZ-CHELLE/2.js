@@ -13,16 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
       ) {
         sections.forEach(s => s.classList.remove('active'));
         section.classList.add('active');
-        header.classList.add('fixed');
-        navbar.classList.add('fixed');
         foundActive = true;
       }
     });
 
     if (!foundActive) {
       sections.forEach(s => s.classList.remove('active'));
-      header.classList.remove('fixed');
-      navbar.classList.remove('fixed');
     }
   }
 
