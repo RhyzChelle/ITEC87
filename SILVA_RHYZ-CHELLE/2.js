@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navLinks.forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === #${current}) {
+      if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
       }
     });
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const amountPaid = parseFloat(document.getElementById('amount-paid').value || 0);
     const change = amountPaid - total;
 
-    document.getElementById('total-amount').textContent = Total Amount: ₱${total.toFixed(2)};
-    document.getElementById('change').textContent = Change: ₱${change.toFixed(2)};
+    document.getElementById('total-amount').textContent = `Total Amount: ₱${total.toFixed(2)}`;
+    document.getElementById('change').textContent = `Change: ₱${change.toFixed(2)}`;
   });
 });
