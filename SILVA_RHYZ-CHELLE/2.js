@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function scrollToSection(targetId) {
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
-      const headerHeight = header.offsetHeight; // Adjust this based on your header's actual height
+      const headerHeight = header.offsetHeight; // Adjust based on your header's actual height
       const offsetTop = targetSection.offsetTop - headerHeight;
       window.scrollTo({
         top: offsetTop,
