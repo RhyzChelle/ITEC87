@@ -7,10 +7,6 @@ body {
   background-position: center;
 }
 
-html {
-      scroll-behavior: smooth;
-    }
-
 header {
   background-image: url("bg22.gif");
   background-size: cover;
