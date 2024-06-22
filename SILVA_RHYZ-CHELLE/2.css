@@ -78,6 +78,8 @@ nav a.active {
 section {
   text-align: center;
   background-color: #f9f9f9;
+ padding-top: 60px;
+margin-top: -60px;		
   
 }
 .home-section p {
